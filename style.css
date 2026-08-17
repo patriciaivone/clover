@@ -24,7 +24,6 @@
   --shadow-soft: 0 24px 48px -28px rgba(43, 41, 39, 0.28);
 }
 
-/* Reset & Prevent Mobile Horizontal Scaling */
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +66,6 @@ input:focus-visible {
   outline-offset: 3px;
 }
 
-/* ---------- Buttons (shared across every page) ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -117,7 +115,6 @@ input:focus-visible {
   width: 100%;
 }
 
-/* Header layout */
 .header {
   display: flex;
   justify-content: space-between;
@@ -185,27 +182,51 @@ input:focus-visible {
   font-weight: 600;
 }
 
+.cart-link {
+  position: relative;
+  top : 3px;
+  color : var(--text-primary);
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(20%, -20%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 25px;
+  height: 25px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background-color: var(--sage-accent);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(43, 41, 39, 0.25);
+}
+
 .floating-cart {
+  z-index : 2;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--sage-accent);
+  background-color: var(--bg-color);
   color: #fff;
   padding: 10px 15px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 3px 16px rgba(43, 41, 39, 0.068);
   transition: background-color 0.25s ease, transform 0.25s ease;
-  color: var(--bg-color);
 }
 
 .floating-cart:hover {
-  background-color: var(--sage-hover);
+  box-shadow: 0 8px 16px rgba(43, 41, 39, 0.3);
   transform: translateY(-2px);
 }
 
-/* ---------- Footer ---------- */
 .footer {
   background: var(--text-primary);
   color: #efece4;
@@ -321,7 +342,6 @@ input:focus-visible {
   color: rgba(239, 236, 228, 0.5);
 }
 
-/* Mobile Optimizations */
 @media (max-width: 640px) {
   :root {
     --header-height: 60px;
