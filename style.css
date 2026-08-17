@@ -186,7 +186,7 @@ input:focus-visible {
 }
 
 .floating-cart {
-   position: fixed;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: var(--sage-accent);
@@ -197,6 +197,12 @@ input:focus-visible {
   font-weight: bold;
   box-shadow: var(--shadow-soft);
   transition: background-color 0.25s ease, transform 0.25s ease;
+  color: var(--bg-color);
+}
+
+.floating-cart:hover {
+  background-color: var(--sage-hover);
+  transform: translateY(-2px);
 }
 
 /* ---------- Footer ---------- */
