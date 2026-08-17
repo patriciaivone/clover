@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+  --bg-color: #fcfbf7;
+  --card-bg: #f5f2eb;
+  --sage-accent: #7d8d79;
+  --sage-hover: #63725f;
+  --text-primary: #2b2927;
+  --text-secondary: #767069;
+  --border-color: #e8e3d9;
+
+  --gold-accent: #b99a5b;
+  --gold-soft: #ece3cf;
+
+  --header-height: 80px;
+  --page-side-gap: 5%;
+  --logo-scale: 0.85;
+  --default-logo-scale: 0.66;
+  --header-bg: rgba(252, 251, 247, 0.9);
+
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --shadow-soft: 0 24px 48px -28px rgba(43, 41, 39, 0.28);
+}
+
+.about-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.about-head{
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  background: none;
+  border: none;
+}
+
+.about-section::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: var(--border-color);
+  margin: 2rem auto;
+  width: 50%;
+}
+
+.about-head:hover {
+  color: var(--gold-accent);
+  transition: color 0.5s ease;
+  user-select: none;
+  scale: 1.05;
+}
+
+.about-section p{
+  font-style : italic;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.team-head {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin : 0 auto;
+  text-align: center;
+}
+
+.team-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+}
+
+.team-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.team-name {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.team-role {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+  margin-bottom: 3rem;
+}
+
