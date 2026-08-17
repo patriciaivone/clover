@@ -186,10 +186,17 @@ input:focus-visible {
 }
 
 .floating-cart {
-  background-color: #ece3cf;
+   position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--sage-accent);
+  color: #fff;
+  padding: 10px 15px;
   border-radius: 999px;
-  position: fixed;
-  
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: var(--shadow-soft);
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 /* ---------- Footer ---------- */
