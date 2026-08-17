@@ -185,6 +185,12 @@ input:focus-visible {
   font-weight: 600;
 }
 
+.floating-cart {
+  background-color: #ece3cf;
+  border-radius: 999px;
+  position: fixed;
+  
+}
 
 /* ---------- Footer ---------- */
 .footer {
