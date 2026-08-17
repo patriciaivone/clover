@@ -16,7 +16,7 @@ const CLOVER_PERFUMES = [
     id: "jasmine-veil",
     name: "Jasmine Veil",
     price: 850000,
-    image: "img/jasmine veil.png",
+    image: "img/Jasmine veil.png",
     notes: "Top Bergamot · Heart Jasmine · Base Sandalwood",
     tags: "female floral popular female-floral popular-floral",
     axes: { fresh: 5, woody: 5, floral: 8, spicy: 1, gourmand: 5 }
