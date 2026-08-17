@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecompare.css">
+    <title>Clover - Our Perfumes</title>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <a href="about.html" class="brand" aria-label="Home">
+                <img src="img/clover.png" alt="Clover logo" class="logo">
+            </a>
+        </div>
+        <nav class="right">
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Perfumes</a>
+            <a href="compare.html">Compare</a>
+            <a href="cart.html" class="cart-link">Cart <span id="cart-count" class="cart-badge">0</span></a>
+            <a href="account.html">Account</a>
+        </nav>
+    </header>
+
+    <div class="scale">
+        <h2 id="title">
+            Can't Decide?
+        </h2>
+        <h1 id="title2">Compare Our Perfumes</h1>
+
+        <div class="choose-section">
+            <div class="compare-col">
+                <label class="compare-label" for="perfume1Select">Perfume 1</label>
+                <select id="perfume1Select" class="compare-select">
+                    <option value="">Choose a perfume…</option>
+                </select>
+                <div class="compare-card" id="card1"></div>
+            </div>
+
+            <div class="compare-vs" aria-hidden="true"><span>VS</span></div>
+
+            <div class="compare-col">
+                <label class="compare-label" for="perfume2Select">Perfume 2</label>
+                <select id="perfume2Select" class="compare-select">
+                    <option value="">Choose a perfume…</option>
+                </select>
+                <div class="compare-card" id="card2"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="img/clover.png" alt="Clover logo" class="footer-logo">
+                <p>Small-batch fragrance, built note by note.</p>
+            </div>
+
+            <nav class="footer-nav">
+                <p class="footer-heading">Shop</p>
+                <a href="index.html">Home</a>
+                <a href="catalog.html">Perfumes</a>
+                <a href="compare.html">Compare</a>
+                <a href="cart.html">Cart</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <form class="footer-signup" id="signupForm">
+                <p class="footer-heading">Stay in the loop</p>
+                <p class="footer-sub">New releases and restocks, no spam.</p>
+                <div class="signup-row">
+                    <label for="signupEmail" class="sr-only">Email address</label>
+                    <input type="email" id="signupEmail" placeholder="you@email.com" required>
+                    <button type="submit">Join</button>
+                </div>
+                <p class="signup-note" id="signupNote" aria-live="polite"></p>
+            </form>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 Clover Perfumery. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="store.js"></script>
+    <script src="script.js"></script>
+    <script src="compare.js"></script>
+</body>
+</html>

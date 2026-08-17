@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecatalog.css">
+    <title>Clover - Our Perfumes</title>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <a href="about.html" class="brand" aria-label="Home">
+                <img src="img/clover.png" alt="Clover logo" class="logo">
+            </a>
+        </div>
+        <nav class="right">
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Perfumes</a>
+            <a href="compare.html">Compare</a>
+            <a href="cart.html" class="cart-link">Cart <span id="cart-count" class="cart-badge">0</span></a>
+            <a href="account.html">Account</a>
+        </nav>
+    </header>
+
+    <div class="catalog-layout">
+        <aside class="catalog-sidenav" aria-label="Catalog filters">
+            <nav class="side-nav-list">
+                <a href="#" class="side-nav-link is-active" data-filter="all">All Perfumes</a>
+
+                <details class="side-nav-group">
+                    <summary class="side-nav-toggle" data-filter="popular">
+                        Popular
+                        <span class="side-nav-chevron" aria-hidden="true">›</span>
+                    </summary>
+                    <div class="side-nav-sub">
+                        <a href="#" class="side-nav-link" data-filter="popular-floral">Floral</a>
+                        <a href="#" class="side-nav-link" data-filter="popular-woody">Woody</a>
+                        <a href="#" class="side-nav-link" data-filter="popular-fresh">Fresh</a>
+                        <a href="#" class="side-nav-link" data-filter="popular-gourmand">Gourmand</a>
+                        <a href="#" class="side-nav-link" data-filter="popular-spicy">Spicy</a>
+                    </div>
+                </details>
+
+                <details class="side-nav-group">
+                    <summary class="side-nav-toggle" data-filter="new">
+                        New Releases
+                        <span class="side-nav-chevron" aria-hidden="true">›</span>
+                    </summary>
+                    <div class="side-nav-sub">
+                        <a href="#" class="side-nav-link" data-filter="new-floral">Floral</a>
+                        <a href="#" class="side-nav-link" data-filter="new-fresh">Fresh</a>
+                        <a href="#" class="side-nav-link" data-filter="new-gourmand">Gourmand</a>
+                        <a href="#" class="side-nav-link" data-filter="new-spicy">Spicy</a>
+                        <a href="#" class="side-nav-link" data-filter="new-fruity">Fruity</a>
+                    </div>
+                </details>
+
+                <details class="side-nav-group">
+                    <summary class="side-nav-toggle" data-filter="male">
+                        Male
+                        <span class="side-nav-chevron" aria-hidden="true">›</span>
+                    </summary>
+                    <div class="side-nav-sub">
+                        <a href="#" class="side-nav-link" data-filter="male-woody">Woody</a>
+                        <a href="#" class="side-nav-link" data-filter="male-fresh">Fresh</a>
+                        <a href="#" class="side-nav-link" data-filter="male-spicy">Spicy</a>
+                    </div>
+                </details>
+
+                <details class="side-nav-group">
+                    <summary class="side-nav-toggle" data-filter="female">
+                        Female
+                        <span class="side-nav-chevron" aria-hidden="true">›</span>
+                    </summary>
+                    <div class="side-nav-sub">
+                        <a href="#" class="side-nav-link" data-filter="female-floral">Floral</a>
+                        <a href="#" class="side-nav-link" data-filter="female-gourmand">Gourmand</a>
+                        <a href="#" class="side-nav-link" data-filter="female-fruity">Fruity</a>
+                    </div>
+                </details>
+            </nav>
+        </aside>
+
+        <section class="catalog-products" aria-label="Perfume catalog">
+            <div class="product-grid" id="productGrid">
+
+                <article class="product-card" data-tags="female floral popular female-floral popular-floral" data-id="jasmine-veil">
+                    <div class="product-image"><img src="img/Jasmine veil.png" alt="Jasmine Veil"></div>
+                    <h3 class="product-name">Jasmine Veil</h3>
+                    <p class="product-notes">Top Bergamot · Heart Jasmine · Base Sandalwood</p>
+                    <p class="product-match" data-match-for="jasmine-veil"></p>
+                    <p class="product-price">Rp 850.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="jasmine-veil" data-name="jasmine Veil" data-price="850000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="female floral new female-floral new-floral" data-id="rose-noir">
+                    <div class="product-image"><img src="img/Rose noir.png" alt="Rose Noir"></div>
+                    <h3 class="product-name">Rose Noir</h3>
+                    <p class="product-notes">Top Citrus · Heart Rose · Base Vanilla</p>
+                    <p class="product-match" data-match-for="rose-noir"></p>
+                    <p class="product-price">Rp 920.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="rose-noir"  data-name="Rose Noir" data-price="920000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="male woody popular male-woody popular-woody" data-id="sandalwood-reserve">
+                    <div class="product-image"><img src="img/sandalwood reserve.png" alt="Sandalwood Reserve"></div>
+                    <h3 class="product-name">Sandalwood Reserve</h3>
+                    <p class="product-notes">Top Bergamot · Heart Lavender · Base Sandalwood</p>
+                    <p class="product-match" data-match-for="sandalwood-reserve"></p>
+                    <p class="product-price">Rp 1.150.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="sandalwood-reserve"  data-name="Sandalwood Reserve" data-price="1150000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="male fresh new male-fresh new-fresh" data-id="bergamot-bay">
+                    <div class="product-image"><img src="img/bergamot bay.png" alt="Bergamot & Bay"></div>
+                    <h3 class="product-name">Bergamot &amp; Bay</h3>
+                    <p class="product-notes">Top Bergamot · Heart Green Tea · Base Cinnamon</p>
+                    <p class="product-match" data-match-for="bergamot-bay"></p>
+                    <p class="product-price">Rp 780.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="bergamot-bay" data-name="Bergamot Bay" data-price="780000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="female floral popular female-floral popular-floral" data-id="lavender-fields">
+                    <div class="product-image"><img src="img/Lavender fields.png" alt="Lavender Fields"></div>
+                    <h3 class="product-name">Lavender Fields</h3>
+                    <p class="product-notes">Top Lemon · Heart Lavender · Base Sandalwood</p>
+                    <p class="product-match" data-match-for="lavender-fields"></p>
+                    <p class="product-price">Rp 690.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="lavender-fields"  data-name="Lavender Fields" data-price="690000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="female gourmand new female-gourmand new-gourmand" data-id="chamomile-hush">
+                    <div class="product-image"><img src="img/chamomile hush.png" alt="Chamomile Hush"></div>
+                    <h3 class="product-name">Chamomile Hush</h3>
+                    <p class="product-notes">Top Green Tea · Heart Chamomile · Base Vanilla</p>
+                    <p class="product-match" data-match-for="chamomile-hush"></p>
+                    <p class="product-price">Rp 730.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="chamomile-hush" data-name="Chamomile Hush" data-price="730000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="male fresh popular male-fresh popular-fresh" data-id="green-tea-study">
+                    <div class="product-image"><img src="img/Green tea study.png" alt="Green Tea Study"></div>
+                    <h3 class="product-name">Green Tea Study</h3>
+                    <p class="product-notes">Top Green Tea · Heart Lavender · Base Cinnamon</p>
+                    <p class="product-match" data-match-for="green-tea-study"></p>
+                    <p class="product-price">Rp 810.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="green-tea-study" data-name="Green Tea Study" data-price="810000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="female gourmand popular female-gourmand popular-gourmand" data-id="vanilla-amber">
+                    <div class="product-image"><img src="img/Vanilla p.png" alt="Vanilla Amber"></div>
+                    <h3 class="product-name">Vanilla Amber</h3>
+                    <p class="product-notes">Top Citrus · Heart Jasmine · Base Vanilla</p>
+                    <p class="product-match" data-match-for="vanilla-amber"></p>
+                    <p class="product-price">Rp 970.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="vanilla-amber" data-name="Vanilla Amber" data-price="970000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="male spicy new male-spicy new-spicy" data-id="lemon-spice">
+                    <div class="product-image"><img src="img/Lemon spice.png" alt="Lemon Spice"></div>
+                    <h3 class="product-name">Lemon Tang</h3>
+                    <p class="product-notes">Top Lemon · Heart Rose · Base Cinnamon</p>
+                    <p class="product-match" data-match-for="lemon-spice"></p>
+                    <p class="product-price">Rp 760.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="lemon-spice" data-name="Lemon Spice" data-price="760000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="male spicy popular male-spicy popular-spicy" data-id="cinnamon-ember">
+                    <div class="product-image"><img src="img/Cinnamon ember.png" alt="Cinnamon Ember"></div>
+                    <h3 class="product-name">Cinnamon Ember</h3>
+                    <p class="product-notes">Top Bergamot · Heart Chamomile · Base Cinnamon</p>
+                    <p class="product-match" data-match-for="cinnamon-ember"></p>
+                    <p class="product-price">Rp 890.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="cinnamon-ember" data-name="Cinnamon Ember" data-price="890000">Add to cart</button>
+                </article>
+
+                <article class="product-card" data-tags="female fruity new female-fruity new-fruity" data-id="citrus-bloom">
+                    <div class="product-image"><img src="img/Citrus bloom.png" alt="Citrus Bloom"></div>
+                    <h3 class="product-name">Citrus Bloom</h3>
+                    <p class="product-notes">Top Citrus · Heart Rose · Base Sandalwood</p>
+                    <p class="product-match" data-match-for="citrus-bloom"></p>
+                    <p class="product-price">Rp 705.000</p>
+                <button class="btn btn-primary btn-small add-to-cart-btn" data-add-id="citrus-bloom" data-name="Citrus Bloom" data-price="705000">Add to cart</button>
+                </article>
+
+            </div>
+
+            <p class="catalog-empty" id="catalogEmpty" hidden>No perfumes in this category yet — check back soon.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="img/clover.png" alt="Clover logo" class="footer-logo">
+                <p>Small-batch fragrance, built note by note.</p>
+            </div>
+
+            <nav class="footer-nav">
+                <p class="footer-heading">Shop</p>
+                <a href="index.html">Home</a>
+                <a href="catalog.html">Perfumes</a>
+                <a href="compare.html">Compare</a>
+                <a href="cart.html">Cart</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <form class="footer-signup" id="signupForm">
+                <p class="footer-heading">Stay in the loop</p>
+                <p class="footer-sub">New releases and restocks, no spam.</p>
+                <div class="signup-row">
+                    <label for="signupEmail" class="sr-only">Email address</label>
+                    <input type="email" id="signupEmail" placeholder="you@email.com" required>
+                    <button type="submit">Join</button>
+                </div>
+                <p class="signup-note" id="signupNote" aria-live="polite"></p>
+            </form>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 Clover Perfumery. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="store.js"></script>
+    <script src="script.js"></script>
+    <script src="catalog.js"></script>
+</body>
+</html>

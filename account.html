@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleaccount.css">
+    <title>Clover — Account</title>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <a href="about.html" class="brand" aria-label="Home">
+                <img src="img/clover.png" alt="Clover logo" class="logo">
+            </a>
+        </div>
+        <nav class="right">
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Perfumes</a>
+            <a href="compare.html">Compare</a>
+            <a href="cart.html" class="cart-link">Cart <span id="cart-count" class="cart-badge">0</span></a>
+            <a href="account.html">Account</a>
+        </nav>
+    </header>
+
+     <main class="page">
+        <div class="page-head">
+            <h1>Account</h1>
+            <p>Sign in to save your preference profile and order history, or take the test as a guest below.</p>
+        </div>
+
+        <!-- Signed-out view -->
+        <section id="loggedOutView">
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="signin">Sign in</button>
+                <button class="auth-tab" data-tab="signup">Create account</button>
+            </div>
+
+            <form id="signinForm" class="auth-form active">
+                <div class="auth-error" id="signinError"></div>
+                <div class="field">
+                    <label for="siEmail">Email</label>
+                    <input id="siEmail" type="email" required>
+                </div>
+                <div class="field">
+                    <label for="siPassword">Password</label>
+                    <input id="siPassword" type="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+            </form>
+
+            <form id="signupForm2" class="auth-form">
+                <div class="auth-error" id="signupError"></div>
+                <div class="field">
+                    <label for="suName">Name</label>
+                    <input id="suName" type="text" required>
+                </div>
+                <div class="field">
+                    <label for="suEmail">Email</label>
+                    <input id="suEmail" type="email" required>
+                </div>
+                <div class="field">
+                    <label for="suPassword">Password</label>
+                    <input id="suPassword" type="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Create account</button>
+            </form>
+        </section>
+
+        <!-- Signed-in view -->
+        <section id="loggedInView" style="display:none;">
+            <div class="account-shell">
+                <aside class="account-side">
+                    <p id="acctName" style="font-weight:600;"></p>
+                    <p class="muted" id="acctEmail"></p>
+                    <button class="btn btn-ghost btn-small" id="logoutBtn" style="margin-top:1rem;">Log out</button>
+                </aside>
+
+                <div>
+                    <div class="account-section">
+                        <h2>Order history</h2>
+                        <div id="orderHistory"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preference quiz (available signed-in or as a guest) -->
+        <div class="quiz-container">
+            <h2 id="question-text"></h2>
+            <div id="answer-buttons"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="img/clover.png" alt="Clover logo" class="footer-logo">
+                <p>Small-batch fragrance, built note by note.</p>
+            </div>
+
+            <nav class="footer-nav">
+                <p class="footer-heading">Shop</p>
+                <a href="index.html">Home</a>
+                <a href="catalog.html">Perfumes</a>
+                <a href="compare.html">Compare</a>
+                <a href="cart.html">Cart</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <form class="footer-signup" id="signupForm">
+                <p class="footer-heading">Stay in the loop</p>
+                <p class="footer-sub">New releases and restocks, no spam.</p>
+                <div class="signup-row">
+                    <label for="signupEmail" class="sr-only">Email address</label>
+                    <input type="email" id="signupEmail" placeholder="you@email.com" required>
+                    <button type="submit">Join</button>
+                </div>
+                <p class="signup-note" id="signupNote" aria-live="polite"></p>
+            </form>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 Clover Perfumery. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+    <script src="store.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>
