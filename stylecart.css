@@ -39,11 +39,10 @@
     border-radius: var(--radius-md);
     font-size: 1rem;
     border: none;
-    padding-right:2rem;
-    padding-left: 2rem;
-    height: 35px;
+    padding : 1rem;
     cursor:pointer;
     color: var(--bg-color);
+    text-decoration: none;
 }
 
 .checkout-button:hover{

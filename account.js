@@ -54,34 +54,10 @@ function refreshAccountView(){
   if (user){
     document.getElementById("acctName").textContent = user.name;
     document.getElementById("acctEmail").textContent = user.email;
-    renderOrderHistory();
   }
   renderQuizArea(); // profile key changes between guest/user, so re-render
 }
 
-function renderOrderHistory(){
-  const orders = cloverGetOrders();
-  const el = document.getElementById("orderHistory");
-  if (orders.length === 0){
-    el.innerHTML = `<p class="muted">No orders yet — they'll show up here after a demo checkout.</p>`;
-    return;
-  }
-  el.innerHTML = orders.map(o => `
-    <div class="order-row">
-      <div>
-        <div>${o.items.map(i => i.name).join(", ")}</div>
-        <div class="oid">${o.id} · ${new Date(o.date).toLocaleDateString()}</div>
-      </div>
-      <strong>${cloverFormatRp(o.total)}</strong>
-    </div>
-  `).join("");
-}
-
-/* Each question targets exactly one of the six axes used by
-   perfume.axes in products.js (fresh, sweet, woody, floral,
-   spicy, intensity), scored 1-9 to match that same scale.
-   That way the finished quiz *is* a compatibility profile —
-   no separate mapping step needed before saving it. */
 const questions = [
   {
     axis: "fresh",

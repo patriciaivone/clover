@@ -132,7 +132,6 @@
 /* ---------- Signed-in view ---------- */
 .account-shell {
   display: grid;
-  grid-template-columns: 220px 1fr;
   gap: 2.5rem;
   align-items: start;
 }
