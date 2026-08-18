@@ -1,4 +1,3 @@
-
 const CLOVER_KEYS = {
   cart: "clover_cart",           // [{ id, qty }]
   users: "clover_users",         // [{ name, email, password }]
@@ -195,7 +194,49 @@ function cloverHighlightActiveNav(){
   });
 }
 
+/* Mobile hamburger menu: toggles the nav dropdown, closes on link
+   click, outside click, Escape, or resizing back to desktop width. */
+function cloverInitNavToggle(){
+  const toggle = document.getElementById("navToggle");
+  const nav = document.getElementById("siteNav");
+  if (!toggle || !nav) return;
+
+  function closeNav(){
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  function toggleNav(){
+    const isOpen = nav.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  }
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleNav();
+  });
+
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeNav);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !toggle.contains(e.target)){
+      closeNav();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeNav();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 640) closeNav();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   cloverUpdateCartBadge();
   cloverHighlightActiveNav();
+  cloverInitNavToggle();
 });

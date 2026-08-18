@@ -15,7 +15,12 @@
                 <img src="img/clover.png" alt="Clover logo" class="logo">
             </a>
         </div>
-        <nav class="right">
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <nav class="right" id="siteNav">
             <a href="index.html">Home</a>
             <a href="catalog.html">Perfumes</a>
             <a href="compare.html">Compare</a>
@@ -64,6 +69,11 @@
 
                 <section class="checkout-section">
                     <h2 class="checkout-section-title">Payment</h2>
+                    <p class="checkout-demo-note">
+                        <i class="material-icons">info</i>
+                        This is a demo store — no real payment is processed and no card details are sent anywhere.
+                    </p>
+
                     <div class="field">
                         <label for="cardName">Name on card</label>
                         <input id="cardName" type="text" autocomplete="cc-name" required>
