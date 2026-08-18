@@ -1,15 +1,3 @@
-/* =========================================================
-   CLOVER — PRODUCT DATABASE
-   Single source of truth for every perfume: price, notes, and
-   the same six axes used by the preference quiz (account.js).
-   cloverCompatibility() in store.js reads perfume.axes and
-   compares it to the customer's saved profile, so every
-   product below needs a value (0-10) on all six axes:
-   fresh, sweet, woody, floral, spicy, intensity.
-
-   cloverFindPerfume(id) is used by store.js (cart) and
-   catalog.js (match %), so this file must load before both.
-========================================================= */
 
 const CLOVER_PERFUMES = [
   {

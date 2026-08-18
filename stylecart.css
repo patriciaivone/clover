@@ -33,6 +33,7 @@
     padding: 3rem;
     margin:auto;
 }
+
 .checkout-button{
     background-color: var(--sage-accent);
     text-align: center;

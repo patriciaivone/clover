@@ -1,11 +1,3 @@
-/* =========================================================
-   ACCOUNT PAGE
-   Three things live here: demo sign in/up (store.js), order
-   history for the logged-in user, and the preference quiz
-   that powers match % everywhere else on the site.
-========================================================= */
-
-/* ---------- Auth tabs ---------- */
 document.querySelectorAll(".auth-tab").forEach(tab => {
   tab.addEventListener("click", () => {
     document.querySelectorAll(".auth-tab").forEach(t => t.classList.remove("active"));
@@ -45,7 +37,6 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
   refreshAccountView();
 });
 
-/* ---------- Signed-in / signed-out view + order history ---------- */
 function refreshAccountView(){
   const user = cloverCurrentUser();
   document.getElementById("loggedOutView").style.display = user ? "none" : "block";
@@ -55,7 +46,7 @@ function refreshAccountView(){
     document.getElementById("acctName").textContent = user.name;
     document.getElementById("acctEmail").textContent = user.email;
   }
-  renderQuizArea(); // profile key changes between guest/user, so re-render
+  renderQuizArea();
 }
 
 const questions = [
@@ -121,9 +112,6 @@ const AXIS_ORDER = ["fresh", "woody", "floral", "spicy", "gourmand"];
 let currentQuestionIndex = 0;
 let score = {};
 
-/* Called on load and whenever login state changes. If a profile
-   is already saved (guest or logged-in), show it instead of
-   forcing a restart; otherwise start the quiz fresh. */
 function renderQuizArea() {
   const existingProfile = cloverGetProfile();
   if (existingProfile) {
