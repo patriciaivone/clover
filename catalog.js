@@ -1,9 +1,3 @@
-/* =========================================================
-   CATALOG PAGE
-   Renders each product's match % (from the preference quiz
-   on account.html) and wires the Add to cart buttons.
-   Requires products.js and store.js to be loaded first.
-========================================================= */
 
 function renderMatchBadges(){
   const hasProfile = !!cloverGetProfile();

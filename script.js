@@ -1,4 +1,4 @@
-// ---------- Fragrance Pyramid: hover/tap a note to see its detail ----------
+
 const noteCards = document.querySelectorAll('.note-card');
 const noteFamily = document.getElementById('noteFamily');
 const noteName = document.getElementById('noteName');
@@ -18,7 +18,6 @@ noteCards.forEach((card) => {
   card.addEventListener('click', () => showNote(card));
 });
 
-// ---------- Scroll reveal ----------
 const revealEls = document.querySelectorAll('.reveal');
 
 if ('IntersectionObserver' in window && revealEls.length) {
@@ -39,7 +38,6 @@ if ('IntersectionObserver' in window && revealEls.length) {
   revealEls.forEach((el) => el.classList.add('in-view'));
 }
 
-// ---------- Newsletter signup (front-end only stub) ----------
 const signupForm = document.getElementById('signupForm');
 const signupNote = document.getElementById('signupNote');
 
@@ -54,13 +52,11 @@ if (signupForm) {
   });
 }
 
-// ---------- Catalog: filter products without leaving the page ----------
 const filterEls = document.querySelectorAll('[data-filter]');
 const productCards = document.querySelectorAll('.product-card');
 const catalogEmpty = document.getElementById('catalogEmpty');
 
 function applyFilter(filter) {
-  // highlight only the elements matching this exact filter value
   filterEls.forEach((el) => el.classList.remove('is-active'));
   document.querySelectorAll(`[data-filter="${filter}"]`).forEach((el) => el.classList.add('is-active'));
 
@@ -80,7 +76,6 @@ function applyFilter(filter) {
 if (filterEls.length && productCards.length) {
   filterEls.forEach((el) => {
     el.addEventListener('click', (e) => {
-      // only prevent default for links (the <summary> toggles need their native open/close behavior)
       if (el.tagName === 'A') e.preventDefault();
       applyFilter(el.dataset.filter);
     });

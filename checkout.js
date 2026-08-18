@@ -1,10 +1,3 @@
-/* =========================================================
-   CHECKOUT PAGE
-   Renders the order summary from the cart, prefills shipping
-   info for a logged-in user, and runs a fake payment flow
-   (no real card processing) before placing a demo order via
-   cloverPlaceOrder() in store.js.
-========================================================= */
 
 const checkoutContainer = document.getElementById("checkoutContainer");
 const checkoutEmpty = document.getElementById("checkoutEmpty");
@@ -13,7 +6,6 @@ const checkoutForm = document.getElementById("checkoutForm");
 const checkoutError = document.getElementById("checkoutError");
 const placeOrderBtn = document.getElementById("placeOrderBtn");
 
-/* ---------- Order summary ---------- */
 function renderSummary() {
   const items = cloverCartDetailed();
 
@@ -50,7 +42,6 @@ function renderSummary() {
   return true;
 }
 
-/* ---------- Prefill from logged-in account ---------- */
 function prefillShipping() {
   const user = cloverCurrentUser();
   if (!user) return;
@@ -59,7 +50,6 @@ function prefillShipping() {
   document.getElementById("cardName").value = user.name || "";
 }
 
-/* ---------- Light input formatting (demo only) ---------- */
 const cardNumberInput = document.getElementById("cardNumber");
 cardNumberInput.addEventListener("input", () => {
   const digits = cardNumberInput.value.replace(/\D/g, "").slice(0, 16);
@@ -78,7 +68,7 @@ cardCvvInput.addEventListener("input", () => {
   cardCvvInput.value = cardCvvInput.value.replace(/\D/g, "").slice(0, 4);
 });
 
-/* ---------- Validation (demo-level, not a real card check) ---------- */
+
 function validateCheckout() {
   const required = [
     "shipName", "shipEmail", "shipAddress", "shipCity", "shipPostal",
@@ -108,7 +98,6 @@ function validateCheckout() {
   return null;
 }
 
-/* ---------- Submit: fake payment + place order ---------- */
 checkoutForm.addEventListener("submit", (e) => {
   e.preventDefault();
   checkoutError.textContent = "";
@@ -124,7 +113,6 @@ checkoutForm.addEventListener("submit", (e) => {
   placeOrderBtn.disabled = true;
   placeOrderBtn.textContent = "Processing payment…";
 
-  // Simulate a payment gateway round-trip. No card data leaves the browser.
   setTimeout(() => {
     const order = cloverPlaceOrder();
     showConfirmation(order, shipName);

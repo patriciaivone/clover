@@ -1,9 +1,9 @@
 const CLOVER_KEYS = {
-  cart: "clover_cart",           // [{ id, qty }]
-  users: "clover_users",         // [{ name, email, password }]
-  session: "clover_session",     // email of logged-in user, or null
-  guestProfile: "clover_guest_profile", // preference axes, when not logged in
-  orders: "clover_orders"        // [{ id, email, items, total, date }]
+  cart: "clover_cart",         
+  users: "clover_users",        
+  session: "clover_session",     
+  guestProfile: "clover_guest_profile", 
+  orders: "clover_orders"     
 };
 
 function cloverRead(key, fallback){
