@@ -129,6 +129,5 @@ function showConfirmation(order, shipName) {
   document.getElementById("confirmTotal").textContent = cloverFormatRp(order.total);
 }
 
-/* ---------- Init ---------- */
 const hadItems = renderSummary();
 if (hadItems) prefillShipping();

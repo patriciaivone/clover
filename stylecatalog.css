@@ -24,9 +24,6 @@
   --shadow-soft: 0 24px 48px -28px rgba(43, 41, 39, 0.28);
 }
 
-
-/* ---------- catalog ---------- */
-
 .catalog-layout {
   display: grid;
   gap: 2rem;

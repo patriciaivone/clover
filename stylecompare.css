@@ -318,8 +318,6 @@
     color: var(--sage-hover);
 }
 
-/* ---------- Mobile ---------- */
-
 @media (max-width: 720px) {
     .choose-section {
         flex-direction: column;

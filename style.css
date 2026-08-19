@@ -182,7 +182,6 @@ input:focus-visible {
   font-weight: 600;
 }
 
-/* ---------- Mobile nav toggle ---------- */
 .nav-toggle {
   display: none;
   flex-direction: column;

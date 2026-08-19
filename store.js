@@ -18,8 +18,6 @@ function cloverWrite(key, value){
   localStorage.setItem(key, JSON.stringify(value));
 }
 
-/* ---------------- CART ---------------- */
-
 function cloverGetCart(){
   return cloverRead(CLOVER_KEYS.cart, []);
 }
@@ -80,8 +78,6 @@ function cloverUpdateCartBadge(){
   badge.style.display = n > 0 ? "inline-flex" : "none";
 }
 
-/* ---------------- DEMO ACCOUNT ---------------- */
-
 function cloverGetUsers(){
   return cloverRead(CLOVER_KEYS.users, []);
 }
@@ -96,7 +92,6 @@ function cloverCurrentUser(){
   return cloverGetUsers().find(u => u.email === email) || null;
 }
 
-/* Returns { ok: true } or { ok: false, error: "message" } */
 function cloverSignUp(name, email, password){
   const users = cloverGetUsers();
   if (users.some(u => u.email === email)){
@@ -106,8 +101,6 @@ function cloverSignUp(name, email, password){
   cloverWrite(CLOVER_KEYS.users, users);
   cloverWrite(CLOVER_KEYS.session, email);
 
-  // If the visitor took the preference quiz as a guest, carry that
-  // profile over to their new account instead of losing it.
   const guestProfile = cloverRead(CLOVER_KEYS.guestProfile, null);
   if (guestProfile) cloverSaveProfile(guestProfile);
 
@@ -125,10 +118,6 @@ function cloverLogOut(){
   localStorage.removeItem(CLOVER_KEYS.session);
 }
 
-/* ---------------- PREFERENCE PROFILE ---------------- */
-/* Stored per logged-in user; falls back to a guest slot so the
-   quiz still works before someone creates an account. */
-
 function cloverProfileKey(){
   const email = cloverCurrentEmail();
   return email ? `clover_profile_${email}` : CLOVER_KEYS.guestProfile;
@@ -145,8 +134,6 @@ function cloverSaveProfile(profile){
 function cloverClearProfile(){
   localStorage.removeItem(cloverProfileKey());
 }
-
-/* ---------------- ORDERS (demo) ---------------- */
 
 function cloverPlaceOrder(){
   const items = cloverCartDetailed();
@@ -171,11 +158,6 @@ function cloverGetOrders(){
   return orders.filter(o => o.email === email).reverse();
 }
 
-/* ---------------- COMPATIBILITY MATH ---------------- */
-/* Same approach as the standalone compare demo: average the
-   absolute difference across the six axes, convert to a 0–100
-   match score. Returns null if no preference profile exists yet. */
-
 function cloverCompatibility(perfume){
   const profile = cloverGetProfile();
   if (!profile) return null;
@@ -185,7 +167,6 @@ function cloverCompatibility(perfume){
   return Math.round(Math.max(0, Math.min(100, 100 - avgDiff * 10)));
 }
 
-/* ---------------- RUN ON EVERY PAGE ---------------- */
 function cloverHighlightActiveNav(){
   const current = window.location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".header nav a").forEach(link => {
@@ -194,8 +175,6 @@ function cloverHighlightActiveNav(){
   });
 }
 
-/* Mobile hamburger menu: toggles the nav dropdown, closes on link
-   click, outside click, Escape, or resizing back to desktop width. */
 function cloverInitNavToggle(){
   const toggle = document.getElementById("navToggle");
   const nav = document.getElementById("siteNav");
